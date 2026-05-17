@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BioPrecision Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1b",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#00201b",
+                        "on-primary-fixed-variant": "#005312",
+                        "secondary": "#4c616c",
+                        "on-surface-variant": "#40493d",
+                        "on-primary-fixed": "#002204",
+                        "surface-variant": "#e1e3e1",
+                        "tertiary-container": "#097c6e",
+                        "background": "#f8faf8",
+                        "primary-container": "#267e2e",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary": "#006418",
+                        "outline-variant": "#bfcaba",
+                        "surface-container-low": "#f2f4f2",
+                        "on-tertiary-container": "#bdfff1",
+                        "on-secondary-fixed-variant": "#354a53",
+                        "primary-fixed-dim": "#82db7e",
+                        "surface-tint": "#106d20",
+                        "primary-fixed": "#9df898",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#cfe6f2",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#b4cad6",
+                        "on-primary-container": "#cbffc2",
+                        "surface-container": "#eceeec",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e6e9e7",
+                        "surface-dim": "#d8dad9",
+                        "inverse-surface": "#2e3130",
+                        "outline": "#707a6c",
+                        "secondary-fixed": "#cfe6f2",
+                        "on-secondary-container": "#526772",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-surface": "#191c1b",
+                        "inverse-on-surface": "#eff1ef",
+                        "tertiary-fixed-dim": "#7ad7c6",
+                        "surface-container-highest": "#e1e3e1",
+                        "tertiary": "#006156",
+                        "on-secondary-fixed": "#071e27",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#97f3e2",
+                        "surface": "#f8faf8",
+                        "inverse-primary": "#82db7e",
+                        "surface-bright": "#f8faf8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body antialiased min-h-screen pb-32">
+<!-- Top Navigation Anchor -->
+<header class="bg-emerald-50/70 dark:bg-zinc-950/70 backdrop-blur-xl docked w-full top-0 sticky z-50 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="potted_plant">potted_plant</span>
+<h1 class="text-xl font-bold tracking-tighter text-emerald-950 dark:text-emerald-50 font-headline">BioPrecision</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/15">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Professional headshot of an agronomist wearing a beige linen shirt in a bright greenhouse environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_YvduubG-jdpLDyXYXf3l4oqG20QJNcjJEzULM7xmes4vZIw0TvrPr8NUezuq796AfsDb_qkk1r4UxKSVyDsCYdpr34z_hDDzJGOIZEfl_JDgIxcpMmvB0iAx_7EuJcBydyCibcfhvYD7-Uw_oEIt0td3IcQ4g0iBt0U3ipzZXkknJI01IfBtAvolj8zzRM1lggYjjXBtTFqQePnjellSKwXv28JlOCb27t0e9WTcnJXnQaZaeW7CWNW4j_HQsIXUXYXuV8V9uIc"/>
+</div>
+</header>
+<main class="px-6 pt-6 space-y-8">
+<!-- Hero Section: Health Overview -->
+<section class="relative">
+<div class="flex justify-between items-end mb-4">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-outline">CURRENT VITALITY</span>
+<h2 class="text-4xl font-headline font-extrabold tracking-tight text-on-background">92% Healthy</h2>
+</div>
+<div class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold font-label">
+                    +4% UP
+                </div>
+</div>
+<div class="relative h-48 w-full rounded-xl overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-90" data-alt="Macro photography of vibrant green basil leaves in a modern hydroponic system with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9FLgL-gpkVef-P0sEqbprUglMHECDDwNiZ5yCs2348MnyP0Suhy8T5H76n4F0dZHkKvdHICqbl6RUKV8_BIKDWCfvho6blbDqr8GMSkkbZMih2xarVoFDTT89XZR0e6Wxz7M1JUHgwjOKfCV20Q03KqVYCHVZQzdR0mLY1BdZ40XrwL0qXBSXkP2NCutas2pZJQD_p7evqjh-py-ZoRD0ZDKtw_KPIyKO0ykW6_1wvwmH6gA4q4Onnv8BfJljcpbFuQCADBqwXF4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+<div class="glass-card px-4 py-2 rounded-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="temp_preferences_eco">temp_preferences_eco</span>
+<div>
+<p class="text-[10px] text-on-surface-variant font-label uppercase font-bold leading-none">Optimal Range</p>
+<p class="text-sm font-bold text-on-surface">Stable Climate</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Weather & Conditions Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Weather Widget -->
+<div class="col-span-2 bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline font-bold text-lg">Local Climate</h3>
+<p class="text-sm text-on-surface-variant">Sacramento Valley, CA</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="partly_cloudy_day">partly_cloudy_day</span>
+</div>
+<div class="flex justify-between">
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-outline">TEMPERATURE</span>
+<p class="text-2xl font-bold">24°C</p>
+</div>
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-outline">HUMIDITY</span>
+<p class="text-2xl font-bold">68%</p>
+</div>
+<div class="space-y-1 text-right">
+<span class="font-label text-[10px] uppercase tracking-widest font-bold text-outline">UV INDEX</span>
+<p class="text-2xl font-bold text-primary">Moderate</p>
+</div>
+</div>
+</div>
+<!-- Health Status Cards -->
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="opacity">opacity</span>
+<div>
+<h4 class="font-headline font-bold text-base leading-tight">Soil Moisture</h4>
+<p class="text-2xl font-extrabold text-primary">42%</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="compost">compost</span>
+<div>
+<h4 class="font-headline font-bold text-base leading-tight">NPK Levels</h4>
+<p class="text-2xl font-extrabold text-primary">Optimal</p>
+</div>
+</div>
+</section>
+<!-- Active Diagnostics Section -->
+<section>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline font-bold text-xl">Recent Insights</h3>
+<button class="text-primary text-sm font-bold font-label uppercase tracking-wider">See History</button>
+</div>
+<div class="space-y-4">
+<!-- Diagnostic Card 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex gap-4 relative overflow-hidden">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Detailed close-up of a tomato leaf showing early signs of yellowing spots in high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBHI2gajIc0QcFjwjNmCIAO06eYDpHhQiA9fgZI6opTImEwzk4dKg6MEBlw8QMbcowRIr0I0h9O5JnShbIJsjqKG4PFlbpOIelRTqIBn6ELQObzQDd0BUIaNu05cD_ZsNd193Yb_vt0fQf3Gu7369vCDBhNPbeARPxkZp4dSh5lmNouReQWrB7pevL7uC5IvWBfjASQXhunPNZ_hXnofglx273aQkm5IhbnQPGdykzdy-XUjxHbXIFnvqteqNj_BmHhRj-uxTm9hU"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h4 class="font-headline font-bold text-base">Early Blight Suspected</h4>
+<p class="text-sm text-on-surface-variant mb-2">Confidence: 89%</p>
+<div class="flex gap-2">
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded-full text-[10px] font-bold font-label uppercase">Action Required</span>
+</div>
+</div>
+<!-- Glass tag break -->
+<div class="absolute top-2 right-2 glass-card border border-white/40 px-2 py-1 rounded-lg text-[10px] font-bold text-primary">
+                        2H AGO
+                    </div>
+</div>
+<!-- Diagnostic Card 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex gap-4 relative overflow-hidden">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Rows of healthy green corn plants growing in a sunlit field with blue sky in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-XdRrPvHEeAFUJD5ecOFoSP6y5xT5c4P84S3BKzr9J3EwKkgpnv8kBzdsvj6YSJpjes1yWOnRyaXq6A-FllCSEdGteS3i1Ebm4iK7B4gVFbnRg_q86Yyn0pWpoY9z4SSF8Xn9rMnwX1exDBcqRMV82brf5PEiH_POhauSYek6bqybc8_VFcb88OixEP0OUWggMx8gVUA_du2MKOIII5oga4p5X_UDOheJjYI8kaHA5XBZbP_prhr-LtQdA4jS5LCYJKgKyotD5Zw"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h4 class="font-headline font-bold text-base">Maize Zone A</h4>
+<p class="text-sm text-on-surface-variant mb-2">Confidence: 98% Healthy</p>
+<div class="flex gap-2">
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded-full text-[10px] font-bold font-label uppercase">Stable</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Scan Now FAB -->
+<div class="fixed bottom-24 right-6 z-[60]">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary w-16 h-16 rounded-xl flex items-center justify-center shadow-[0_12px_40px_rgba(0,100,24,0.3)] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="camera" style="font-variation-settings: 'FILL' 1;">camera</span>
+</button>
+</div>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-8 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-2xl shadow-[0_-8px_30px_rgb(0,0,0,0.04)] rounded-t-[2rem]">
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-200 rounded-2xl px-6 py-2 transition-all tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Dashboard</span>
+</a>
+<!-- Capture -->
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-6 py-2 transition-all hover:bg-emerald-50 dark:hover:bg-zinc-800 rounded-2xl tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="camera">camera</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Capture</span>
+</a>
+<!-- History -->
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-6 py-2 transition-all hover:bg-emerald-50 dark:hover:bg-zinc-800 rounded-2xl tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="database">database</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">History</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-6 py-2 transition-all hover:bg-emerald-50 dark:hover:bg-zinc-800 rounded-2xl tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Disease History - BioPrecision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d8dad9",
+                        "surface": "#f8faf8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#40493d",
+                        "primary-fixed": "#9df898",
+                        "on-primary-fixed-variant": "#005312",
+                        "surface-bright": "#f8faf8",
+                        "secondary-container": "#cfe6f2",
+                        "on-secondary-fixed-variant": "#354a53",
+                        "tertiary-fixed": "#97f3e2",
+                        "on-secondary-container": "#526772",
+                        "on-primary-container": "#cbffc2",
+                        "surface-container-low": "#f2f4f2",
+                        "surface-tint": "#106d20",
+                        "on-tertiary-fixed": "#00201b",
+                        "primary-fixed-dim": "#82db7e",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eff1ef",
+                        "inverse-primary": "#82db7e",
+                        "surface-variant": "#e1e3e1",
+                        "on-primary-fixed": "#002204",
+                        "tertiary-fixed-dim": "#7ad7c6",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#bfcaba",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3130",
+                        "on-secondary-fixed": "#071e27",
+                        "surface-container-highest": "#e1e3e1",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e9e7",
+                        "secondary-fixed-dim": "#b4cad6",
+                        "on-background": "#191c1b",
+                        "secondary": "#4c616c",
+                        "primary": "#006418",
+                        "surface-container": "#eceeec",
+                        "secondary-fixed": "#cfe6f2",
+                        "tertiary-container": "#097c6e",
+                        "primary-container": "#267e2e",
+                        "background": "#f8faf8",
+                        "tertiary": "#006156",
+                        "on-tertiary-container": "#bdfff1",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "outline": "#707a6c",
+                        "on-surface": "#191c1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #f8faf8;
+            font-family: 'Inter', sans-serif;
+            color: #191c1b;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-emerald-50/70 dark:bg-zinc-950/70 backdrop-blur-xl docked w-full top-0 sticky z-50 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-xl">
+<span class="material-symbols-outlined text-emerald-900 dark:text-emerald-400" data-icon="potted_plant">potted_plant</span>
+</div>
+<h1 class="text-xl font-bold tracking-tighter text-emerald-950 dark:text-emerald-50 font-headline">BioPrecision</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed ring-2 ring-surface">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="close-up portrait of a professional agronomist smiling in a modern laboratory setting with soft focus greenhouse background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm4lY7Lztvt9JQAzZ_LBECvSI07-Y0HOc6e5Z3bAQSvrVZxXxqW30AraP_7Pi3Pxaz9Zg6PGY0rMNAelvX3ohyt9L2JGBj8yp6bkWTJkOj9c_JxKgUtdnVhcrMl-HyPnkKMBeOL7VD5BpNwRy1xcnpvMIIEIoE_irSGlEvxiPgvG9QIFeRnQHJCadJOdqrpHa5ftKMYA7o8y7swDJMvq1COuNdA6Tn-e_jpITwaMKXWZeaAuv8Lr4WVl-o57hMYCjBO6kmCO4LMaM"/>
+</div>
+</header>
+<main class="px-6 pt-6 max-w-2xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-8">
+<span class="font-label uppercase tracking-widest text-[10px] font-bold text-primary mb-1 block">Repository</span>
+<h2 class="text-3xl font-headline font-extrabold tracking-tight text-on-surface">Disease History</h2>
+<p class="text-on-surface-variant text-sm mt-1">Review and manage historical diagnostic scans from your crops.</p>
+</section>
+<!-- Search & Filter Bar -->
+<div class="flex gap-3 mb-8">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface-variant/50" placeholder="Search diseases..." type="text"/>
+</div>
+<button class="bg-surface-container-low p-3 rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+<!-- Diagnostic List -->
+<div class="space-y-6">
+<!-- Diagnosis Card 1 -->
+<div class="group relative surface-container-lowest bg-white rounded-[2rem] overflow-hidden border border-outline-variant/10 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] active:scale-[0.98]">
+<div class="flex flex-col md:flex-row p-5 gap-5">
+<div class="relative w-full md:w-32 h-32 rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Macro close-up of a tomato plant leaf with visible late blight spots and fungal growth texture, high contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVvBHU2xng_aNgKw5LHMZveKx89GWQi6LyRDYYRDAeRzMkqmDD9qUgoziq9V9KQRHN6VmUwV2GrZOK_6ZPKcyqTdodNONyx6DK0W3Tn_HLVG6g4ovvssufZokU5u0hZtXZGuUqYiVlEYIIceGHt4tW_SAPWQdYDi3Z3wLCvp-RxZH5vOBeyDSN7lLr6AHol8vJQCxLeDdJmJIZxvvJy2HFrL1kRakqtARkDVd0rIdFqQEzw3EpZgUOSMzq8wIML0ZNOHvOhY5RBfA"/>
+<div class="absolute top-2 right-2 glass-card rounded-full px-2 py-1 flex items-center gap-1 border border-white/40">
+<span class="text-[10px] font-bold text-emerald-950">98%</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-lg text-on-surface">Late Blight</h3>
+<span class="bg-red-100 text-red-800 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-wider">Action Required</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs mb-3">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Oct 24, 2023 • 09:42 AM</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-white bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-primary-fixed">psychiatry</span>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-fixed">water_drop</span>
+</div>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                                View Report <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Asymmetric "Leaf" Decoration -->
+<div class="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<!-- Diagnosis Card 2 -->
+<div class="group relative surface-container-lowest bg-white rounded-[2rem] overflow-hidden border border-outline-variant/10 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] active:scale-[0.98]">
+<div class="flex flex-col md:flex-row p-5 gap-5">
+<div class="relative w-full md:w-32 h-32 rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Detailed macro of a green leaf showing orange rust spots, cinematic side lighting, morning dew droplets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnoOJ5LAx_mhTId_u19un0JRvEHQEtCSpWQwWPeQol6TVQljHaxS0hQOyPnYxy8DKlflaHb60qvyCFsY2CKjUBTn1UN_XMevYEseyG5tJf5XCCPOgedEHqH8IQ1BOFLaAIxf8wnEqTylew3on9TAuLFjxPf4gwyQUdNA5OWwQsRLn801I6M6AABhtNYFCriOuKQwD1uvtkCMxeIfa136chS3tV3YwKxyn-1y-jry9bkzGXM16aftn7BFXz8kSqWy9pxCbCO0y868g"/>
+<div class="absolute top-2 right-2 glass-card rounded-full px-2 py-1 flex items-center gap-1 border border-white/40">
+<span class="text-[10px] font-bold text-emerald-950">92%</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-lg text-on-surface">Leaf Rust</h3>
+<span class="bg-amber-100 text-amber-800 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-wider">Under Treatment</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs mb-3">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Oct 20, 2023 • 02:15 PM</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-xs text-on-surface-variant font-medium">Stage 2 Infection</span>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                                View Report <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-6 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-colors"></div>
+</div>
+<!-- Diagnosis Card 3 -->
+<div class="group relative surface-container-lowest bg-white rounded-[2rem] overflow-hidden border border-outline-variant/10 shadow-[0_8px_30px_rgb(0,0,0,0.02)] transition-all hover:shadow-[0_20px_40px_rgb(0,0,0,0.06)] active:scale-[0.98]">
+<div class="flex flex-col md:flex-row p-5 gap-5">
+<div class="relative w-full md:w-32 h-32 rounded-2xl overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Healthy vibrant green leaves of a plant under bright direct sunlight, lush texture and deep green colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN8t8zKDnH1GfeH7cbPt6THV_c8FdN8Vk5AEUwvhEo0NAS6qgJBn4Q2jKDwd36rpHEx7ORdHhN_iiKn0OXZJf29j04f3Up9Gx_DuSaGjDlxZe6tZzyVPvXF5-GiDR1MWgpZHUTiPtnJUWcpytxU_PX5ks-BLnzzD1A_lTtjv4jMlEKpRFtSri4bREDS4pF-svlUH1buwNhRQ3UOnp12NW3TQ53cQx4GLeb3GQzeQF1i-CoC2VPcMn-X8YSU3b5mJ0RcooCR1QpjCo"/>
+<div class="absolute top-2 right-2 glass-card rounded-full px-2 py-1 flex items-center gap-1 border border-white/40">
+<span class="text-[10px] font-bold text-emerald-950">100%</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-bold text-lg text-on-surface">No Disease</h3>
+<span class="bg-emerald-100 text-emerald-800 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-wider">Resolved</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-xs mb-3">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Oct 15, 2023 • 11:00 AM</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-xs text-on-surface-variant font-medium">Crop Healthy</span>
+</div>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                                View Report <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Monthly Summary Glass Card -->
+<div class="mt-12 glass-card p-6 rounded-[2.5rem] border border-white/50 shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="font-headline font-bold text-lg mb-4">Monthly Analytics</h4>
+<div class="grid grid-cols-3 gap-4">
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Scans</p>
+<p class="text-2xl font-headline font-extrabold text-primary">24</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">At Risk</p>
+<p class="text-2xl font-headline font-extrabold text-error">03</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Health</p>
+<p class="text-2xl font-headline font-extrabold text-secondary">88%</p>
+</div>
+</div>
+</div>
+<!-- Decorative Background Element -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-8 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-2xl shadow-[0_-8px_30px_rgb(0,0,0,0.04)] rounded-t-[2rem]">
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-6 py-2 hover:bg-emerald-50 dark:hover:bg-zinc-800 rounded-2xl tap-highlight-transparent transition-transform active:scale-90 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-emerald-800" data-icon="grid_view">grid_view</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-6 py-2 hover:bg-emerald-50 dark:hover:bg-zinc-800 rounded-2xl tap-highlight-transparent transition-transform active:scale-90 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-emerald-800" data-icon="camera">camera</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Capture</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-900/40 text-emerald-900 dark:text-emerald-200 rounded-2xl px-6 py-2 transition-all tap-highlight-transparent active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="database" style="font-variation-settings: 'FILL' 1;">database</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-6 py-2 hover:bg-emerald-50 dark:hover:bg-zinc-800 rounded-2xl tap-highlight-transparent transition-transform active:scale-90 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-emerald-800" data-icon="person">person</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</a>
+</nav>
+</body></html>
