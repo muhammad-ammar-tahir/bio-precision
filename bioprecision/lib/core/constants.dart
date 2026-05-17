@@ -1,8 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
 /// Replace these with your actual API keys before running on a device.
-const String API_KEY_GEMINI = 'AIzaSyA67Znd5xHdfqQ-gE_pfALvRqw5AZJTfQ8';
-const String API_KEY_WEATHER = '3a7b611eb09d8ac86230f61f9c9d6d15';
+const String API_KEY_GEMINI = 'Enter your gemini api key here';
+const String API_KEY_WEATHER = 'Enter your weather api key here';
 
 const String GEMINI_BASE_URL =
     'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
